@@ -1,0 +1,59 @@
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    background: cadetblue;
+    padding-bottom: 50px;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+.card{
+    background: lightgreen;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 30px;
+    flex-basis: 200px;
+}
+.cardFlex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form{
+    margin-top: 50px;
+}
+.form div{
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    justify-content: center;
+}
+input{
+    font-size: 20px;
+    background:tan;
+    border: solid 1px tan;
+    padding: 10px;
+    margin: 10px 10px 10px 0;
+    width: 33.3333%;
+    box-sizing: border-box;
+    flex-basis: 270px;
+
+}
+input:hover{
+    background: white;
+    border: solid 1px green;
+}
+.button{
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background:tan;
+    width: 50%;
+    margin: 0 auto;
+    color: green;
+    font-size: 20px;
+    text-align: center;
+}
+.button:hover{
+    background: rgba(255, 255, 0, 0.932);
+}

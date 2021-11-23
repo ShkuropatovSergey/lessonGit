@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- qqqqqqqqqqqqqqqqqqqqqqqqq -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Добавление машин</title>
+</head>
+<body>
+    <!-- <div class="wrapper"> -->
+        <!-- <div class="cardFlex"></div> -->
+        <form class="form" method="GET" action="http://localhost:8081">
+                <input type="text" id="mark" name="mark" placeholder="Введите марку автомобиля ">
+                <input type="text" id="model" name="model" placeholder="Введите модель автомобиля ">
+                <input type="text" id="photo" name="photo" placeholder="Введите ссылку на автомобиль"> 
+            <button type="submit" class="button" >Отправить</button>
+        </form>
+    <!-- </div> -->
+ <!-- <script>
+    var data=[];
+    //Первоначальные данные
+    var data = [{"mark":"BMW","model":"X6","photo":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/2015-bmw-x6.jpg/1200px-2015-bmw-x6.jpg"},
+    {"mark":"DODGE","model":"Viper","photo":"https://motor.ru/imgs/2020/07/05/19/3987895/c2c18e4a0c0a105303a5c96c7e3c82bcd9057a16.jpg"}]
+    $.ajaxSetup({async : false});
+    
+    writeContent(); 
+
+ function writeContent(){
+    var obj={};
+    console.log(obj);
+    obj.mark=document.querySelector("#mark").value;
+    obj.model=document.querySelector("#model").value;
+    obj.photo=document.querySelector("#photo").value;
+    if((obj.mark !="") &&  (obj.mark !="") &&  (obj.mark !="")){
+        data.push(obj);
+    }
+        var send=JSON.stringify(data);
+        $.get("http://localhost:8081/?data="+send);
+        // var d=$.get("http://localhost:8081/");
+        // console.log(d);
+        // var d = JSON.parse(d.responseText);
+        // console.log(d);
+        readContent();
+        // var d=$.get("http://localhost:8081/");
+        // console.log(d);
+        // var d = JSON.parse(d.responseText);
+        // console.log(d);
+}
+ function readContent(){
+    var car = $.get("http://localhost:8080/");
+    var car = JSON.parse(car.responseText);
+    console.log(car);
+    document.querySelector(".cardFlex").innerHTML =""  ;
+
+    for (var i=0; i<car.length; i++) {
+    document.querySelector(".cardFlex").innerHTML +=
+    `
+    <div class="card">
+        <div>
+            Марка: ${car[i].mark}
+        </div>
+        <div>
+            Модель: ${car[i].model}
+        </div>
+        <img src="${car[i].photo}"> 
+    </div>
+    `
+}
+document.querySelector("#mark").value="";
+document.querySelector("#model").value="";
+document.querySelector("#photo").value="";
+}
+
+</script>  -->
+</body>
+</html>
